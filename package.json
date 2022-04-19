@@ -4,7 +4,8 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv public"
+    "start": "sirv public -s",
+    "start:dev": "sirv public --dev -s"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^16.0.0",
@@ -23,6 +24,7 @@
     "materialize-css": "^1.0.0-rc.2",
     "postcss": "^7",
     "sirv-cli": "^1.0.0",
+    "svelte-navigator": "^3.1.5",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   }
 }

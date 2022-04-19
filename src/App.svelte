@@ -1,46 +1,43 @@
 <script>
+  import { Router, Route, Link } from "svelte-navigator";
+  import { user } from "./stores";
+  import Header from "./components/Header.svelte";
+
+  import Home from "./pages/Home.svelte";
+  import Sidebar from "./components/Sidebar.svelte";
+  import Dao from "./pages/dao/DAO.svelte";
 </script>
 
-<main>
-	<nav class="bg-blue-900 shadow-lg">
-		<div class="container mx-auto">
-		 <div class="sm:flex">
-		  <a href="#/" class="text-white text-3xl font-bold p-3">
-			  APP LOGO</a>
-			 
-		  <!-- Menus  -->
-		  <div class="ml-55 mt-4">
-		   <ul class="text-white sm:self-center text-xl">
-			   <li class="sm:inline-block">
-				   <a href="#/" class="p-3 hover:text-red-900">About</a>
-			   </li>
-			   <li class="sm:inline-block">
-				   <a href="#/" class="p-3 hover:text-red-900">Services</a>
-			   </li>
-			   <li class="sm:inline-block">
-				   <a href="#/" class="p-3 hover:text-red-900">Blog</a>
-			   </li>
-			   <li class="sm:inline-block">
-				   <a href="#/" class="p-3 hover:text-red-900">Contact</a>
-			   </li>
-		   </ul>
-		  </div>
-		 </div>
-		</div>
-	</nav>
-
-</main>
+<html lang="EN">
+  <head />
+  <Router>
+    <body>
+      <div class="h-screen flex overflow-hidden bg-cool-gray-100">
+        <!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
+        <Sidebar />
+        <div class="flex-1 overflow-auto focus:outline-none" tabindex="0">
+          <Header />
+          <Route path="/">
+            <Home />
+          </Route>
+          <Route path="dao/*">
+            <Dao />
+          </Route>
+        </div>
+      </div>
+    </body>
+  </Router>
+</html>
 
 <style global lang="postcss">
-	@tailwind base;
-  	@tailwind components;
+  @tailwind base;
+  @tailwind components;
   /* purgecss end ignore */
-  	@tailwind utilities;
+  @tailwind utilities;
 
-
-	@layer utilities {
-  		.ml-55 {
-    		margin-left: 55%;
-		}
-	}
+  @layer utilities {
+    .ml-55 {
+      margin-left: 55%;
+    }
+  }
 </style>

@@ -1,4 +1,6 @@
 const production = !process.env.ROLLUP_WATCH; 
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   future: { 
     purgeLayersByDefault: true, 
@@ -13,5 +15,5 @@ module.exports = {
       
     ], 
     enabled: production // disable purge in dev
-  },
+  }
 };
