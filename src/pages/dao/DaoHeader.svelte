@@ -1,14 +1,18 @@
-<div>
+<script>
+  import { Link } from "svelte-navigator";
+</script>
+
+<div class="border-2 rounded-lg px-4">
   <div class="mt-2 md:flex md:items-center md:justify-between w-full ">
-    <div class="flex min-w-0">
+    <div class="flex min-w-0 items-center">
       <img
-        class="w-24 h-24 flex-shrink-0 mx-auto bg-black rounded-md border-2 border-white"
+        class="w-20 h-20 flex-shrink-0 mx-auto bg-black rounded-full border-2 border-gray-200"
         src="/assets/OW-dao.png"
         alt=""
       />
-      <div class="px-4 mx-2 p-2 w-full">
+      <div class="px-2 mx-2 p-2 w-full">
         <h2
-          class="text-2xl font-medium leading-7 text-gray-900 sm:text-3xl sm:leading-9 sm:truncate"
+          class="text-xl font-thin leading-7 text-gray-900 sm:text-3xl sm:leading-9 sm:truncate"
         >
           OurWorld DAO
         </h2>
@@ -37,45 +41,47 @@
       </span>
     </div>
   </div>
-</div>
-<div class="my-4 border-2 rounded-lg">
-  <div class="sm:hidden">
-    <select aria-label="Selected tab" class="form-select block w-full">
-      <option>Home</option>
-      <option>Company</option>
-      <option selected>Members</option>
-      <option>Billing</option>
-    </select>
-  </div>
-  <div class="hidden sm:block">
-    <div class="border-gray-200">
-      <nav class="-mb-px flex">
-        <a
-          href="#"
-          class="w-1/4 py-4 px-1 text-center border-b-2 border-transparent font-medium text-sm leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300"
-        >
-          Dashboard
-        </a>
-        <a
-          href="#"
-          class="w-1/4 py-4 px-1 text-center border-b-2 border-transparent font-medium text-sm leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300"
-        >
-          About
-        </a>
-        <a
-          href="#"
-          class="w-1/4 py-4 px-1 text-center border-b-2 border-indigo-500 font-medium text-sm leading-5 text-indigo-600 focus:outline-none focus:text-indigo-800 focus:border-indigo-700"
-          aria-current="page"
-        >
-          Members
-        </a>
-        <a
-          href="#"
-          class="w-1/4 py-4 px-1 text-center border-b-2 border-transparent font-medium text-sm leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300"
-        >
-          Proposals
-        </a>
-      </nav>
+
+  <div class="my-4 border-2 rounded-lg">
+    <div class="sm:hidden">
+      <select aria-label="Selected tab" class="form-select block w-full">
+        <option selected>Dashboard</option>
+        <option>About</option>
+        <option>Members</option>
+        <option>Proposals</option>
+      </select>
+    </div>
+    <div class="hidden sm:block">
+      <div class="border-gray-200">
+        <nav class="-mb-px flex">
+          <Link
+            to=""
+            class="w-1/4 py-4 px-1 text-center border-b-2 border-indigo-500 font-medium text-sm leading-5 text-indigo-600 focus:outline-none focus:text-indigo-800 focus:border-indigo-700"
+          >
+            Dashboard
+          </Link>
+
+          <Link
+            to="#"
+            class="w-1/4 py-4 px-1 text-center border-b-2 border-transparent font-medium text-sm leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300"
+          >
+            About
+          </Link>
+          <Link
+            to="members"
+            class="w-1/4 py-4 px-1 text-center border-b-2 border-transparent font-medium text-sm leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300"
+            aria-current="page"
+          >
+            Members
+          </Link>
+          <Link
+            to="#"
+            class="w-1/4 py-4 px-1 text-center border-b-2 border-transparent font-medium text-sm leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300"
+          >
+            Proposals
+          </Link>
+        </nav>
+      </div>
     </div>
   </div>
 </div>

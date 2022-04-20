@@ -20,7 +20,7 @@
   </p>
   <div class="bg-gray-500 w-full h-2 rounded mt-2">
     <div class="flex">
-      <div class="bg-green-500 w-6/12 h-2 rounded" />
+      <div class="bg-green-500 w-6/12 h-2 rounded z-10" />
       <div class="bg-red-300 -left-2 relative w-1/6 h-2 rounded" />
     </div>
   </div>

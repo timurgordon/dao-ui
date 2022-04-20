@@ -3,7 +3,7 @@
   import ProposalRow from "./ProposalRow.svelte";
 </script>
 
-<Link to="dao">
+<Link to="dao" class="no-underline">
   <div class="bg-white overflow-hidden shadow rounded-lg">
     <div class="p-5">
       <div class="flex items-center">
